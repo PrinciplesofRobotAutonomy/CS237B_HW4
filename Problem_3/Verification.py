@@ -9,7 +9,7 @@ tf.keras.backend.set_floatx('float32')
 
 def load_actor_network(frozen_actor_path):
     """
-            loads the actor network from saved file
+    loads the actor network from saved file
 
     arguments:
         frozen_actor_path: a string with the path of the frozen network
@@ -77,7 +77,7 @@ def check_actor_correct(network, network_inputs, network_outputs,
         # Set your lower and upper bound using
         # network.setLowerBound() and network.setUpperBound()
 
-        
+
         ######### Your code ends here #########
     if correct_action == 0:
         addInequality(network,
@@ -86,7 +86,7 @@ def check_actor_correct(network, network_inputs, network_outputs,
     else:
         addInequality(network,
                       [network_outputs[0], network_outputs[1]],
-                      [-1., 0.], 0.)
+                      [-1., 1.], 0.)
     vals, stats = network.solve()
     if len(vals) > 0:
         # SAT

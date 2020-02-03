@@ -215,7 +215,7 @@ class TrafficObject:
 
         for other_id in self.possible_relevant_others:
             ######### Your code starts here #########
-            # Filter out TOs which are too far away
+            # Filter out TOs which are too far away longitudinally (x-distance)
             # Fill in the parts indicated by #FILL#. No additional lines are required.
 
 
@@ -418,7 +418,7 @@ class TrafficObject:
 
 
 
-            
+
 
             ######### Your code ends here #########
 

@@ -57,7 +57,7 @@ def ettc(x_rel, v_follow, v_lead, a_follow, a_lead):
     :return: float, the enhanced time to collision or np.nan if the following vehicle is slower (considering also acceleartion)
     Conditions for returning np.nan:
         - if the following vehicle is slower (also consider acceleration)
-        - v_rel < 2*a_rel * ttc condition isn't met
+        - v_rel >=2*a_rel * ttc condition isn't met
         - any time you get a divide-by-zero error
         - any time your value returns np.nan
     """

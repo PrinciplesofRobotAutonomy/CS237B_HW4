@@ -28,11 +28,6 @@ def ttc(x_rel, v_follow, v_lead):
     :param v_follow: float, the velocity of the following vehcile
     :param v_lead: float, the velocity of the leading vehcile
     :return: float, the time to collision or np.nan
-        Conditions for returning np.nan:
-            - if the following vehicle is slower (also consider acceleration)
-            - v_rel < 2*a_rel * ttc condition isn't met
-            - any time you get a divide-by-zero error
-            - any time your value returns np.nan
     """
     ######### Your code starts here #########
     # if the risk measure is not defined for the given parameters return np.nan
@@ -60,6 +55,11 @@ def ettc(x_rel, v_follow, v_lead, a_follow, a_lead):
     :param a_follow: float, the acceleration of the following vehcile
     :param a_lead: float, the acceleration of the leading vehcile
     :return: float, the enhanced time to collision or np.nan if the following vehicle is slower (considering also acceleartion)
+    Conditions for returning np.nan:
+        - if the following vehicle is slower (also consider acceleration)
+        - v_rel < 2*a_rel * ttc condition isn't met
+        - any time you get a divide-by-zero error
+        - any time your value returns np.nan
     """
     ######### Your code starts here #########
     # if the risk measure is not defined for the given parameters return np.nan
